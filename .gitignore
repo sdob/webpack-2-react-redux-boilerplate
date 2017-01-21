@@ -1,0 +1,9 @@
+node_modules
+build
+dist
+.*.sw[op]
+.env
+*.log
+coverage
+.coverage
+lib-cov
