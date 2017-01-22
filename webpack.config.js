@@ -8,8 +8,19 @@ require('dotenv').config();
 // Rules are defined in config/rules
 const rules = require('./config/rules')(__dirname);
 
+const devServer = {
+  historyApiFallback: true,
+  hot: true,
+  inline: true,
+  contentBase: './app',
+  port: 8080,
+};
+
 const config = {
-  entry: path.resolve(__dirname, 'app/main.jsx'),
+  devServer: devServer,
+  entry: [
+    path.resolve(__dirname, 'app/main.jsx'),
+  ],
   output: {
     filename: 'bundle.js',
     path: path.resolve(__dirname, 'dist'),

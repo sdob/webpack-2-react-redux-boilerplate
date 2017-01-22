@@ -9,6 +9,7 @@
     "prebuild": "npm run clean:build",
     "build": "webpack",
     "server": "node server",
+    "start": "webpack-dev-server --devtool eval --progress --hot --content-base app",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "author": "",
@@ -35,6 +36,7 @@
     "style-loader": "^0.13.1",
     "url-loader": "^0.5.7",
     "webpack": "2.2",
+    "webpack-dev-server": "2.2",
     "webpack-merge": "^2.4.0"
   }
 }
